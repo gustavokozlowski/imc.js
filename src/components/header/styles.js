@@ -3,9 +3,7 @@ import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
   background-color: #b686c7;
-  padding: 0;
-  margin: 0;
-  height: 7%;
+  height: 8vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -28,6 +26,7 @@ export const NavbarContainer = styled.nav`
 `;
 export const NavbarLink = styled(Link)`
   text-decoration: none;
+  text-shadow: #000 0.1em 0.1em 0.2em;
   color: #fff;
   font-size: 20px;
   margin: 10px;
@@ -38,4 +37,5 @@ export const NavbarLink = styled(Link)`
   &:active {
     color: #fff7;
   }
+  
 `;

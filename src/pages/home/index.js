@@ -1,9 +1,11 @@
 import React from "react";
+import { Box } from "../../components/box";
+import { ContainerHome } from "./styles";
 
 export const Home = () => {
   return (
-    <div>
-      <h1>Tá em casa paizão</h1>
-    </div>
+    <ContainerHome>
+      <Box />
+    </ContainerHome>
   );
 };
