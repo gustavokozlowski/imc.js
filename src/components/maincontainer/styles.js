@@ -13,7 +13,7 @@ export const Container = styled.div`
   bottom: 1px;
   right: 0.5px;
   flex-direction: column;
-  color: #ffff;
+  color: #f31233;
   
   
 `

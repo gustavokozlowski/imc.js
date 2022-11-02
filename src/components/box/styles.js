@@ -5,7 +5,7 @@ export const ContainerBox = styled.main`
   background-color: #fff;
   padding: 0;
   margin: 0;
-  height: 40vh;
+  height: 50vh;
   width: 30vw;
   display: flex;
   flex-direction: column;
@@ -31,9 +31,13 @@ export const ContainerForm = styled.form`
  justify-content: center;
  align-items: center;
  flex-direction: column;
+ margin-bottom: 20px;
 `
 export const ErrorMessage = styled.p`
-  font-size: 16px;
-  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom:5px;
+  margin-top: -4px;
+  color: #f33;
   font-family: 'Roboto',; 
 `
