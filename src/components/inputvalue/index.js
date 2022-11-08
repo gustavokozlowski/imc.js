@@ -7,20 +7,18 @@ export const InputValue = ({
   onChange,
   value,
   type,
-  ref
+
 }) => {
   
   return (
-    <ContainerInput className="input">
+    <ContainerInput >
       <Label>{label}</Label>
       <Input
-      
         type={type}
         placeholder={placeholder}
         onChange={onChange}
         value={value}
       />
- 
     </ContainerInput>
   );
 };

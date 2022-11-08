@@ -12,7 +12,7 @@ export const ContainerBox = styled.main`
   border: 2px solid #000;
   align-items: center;
   text-align: center;
-  /* opacity: 0.6; */
+  opacity: 0.7;
   border-radius: 15px;
   /* box-shadow: 10px 10px 10px 10px #000; */
   box-shadow: 5px 4px 8px 6px rgba(0, 0, 0, 0.9), 5px 6px 30px 5px rgba(0, 0, 0, 0.9);
@@ -40,4 +40,12 @@ export const ErrorMessage = styled.p`
   margin-top: -4px;
   color: #f33;
   font-family: 'Roboto',; 
+`
+export const ButtonContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  height: 25%;
+  width: 90%;
 `
