@@ -1,7 +1,7 @@
-import styled , { css } from "styled-components";
+import styled from "styled-components";
 
 export const ContainerButton = styled.button`
-  border-radius: 10px;
+  border-radius: 4px;
   text-align: center;
   font-size: 15px;
   background: #b686c7;
