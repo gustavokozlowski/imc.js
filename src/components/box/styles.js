@@ -5,7 +5,7 @@ export const ContainerBox = styled.main`
   background-color: #fff;
   padding: 0;
   margin: 0;
-  height: 50vh;
+  height: 40vh;
   width: 30vw;
   display: flex;
   flex-direction: column;

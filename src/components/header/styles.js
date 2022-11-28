@@ -15,10 +15,9 @@ export const ContainerHeader = styled.header`
 export const AppTitle = styled.h1`
   color:  #fff ;
   font-size: 26px;
-  font-weight: bolder;
-  font-style: normal;
   text-shadow: #000 0.1em 0.1em 0.2em;
-  margin-right: 500px;
+  margin-right: 35vh;
+  font-weight: bolder;
   
 `;
 export const NavbarContainer = styled.nav`

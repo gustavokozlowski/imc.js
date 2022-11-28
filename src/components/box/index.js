@@ -2,7 +2,8 @@ import { ContainerBox, Title, ContainerForm, ButtonContainer} from "./styles";
 import { InputValue } from "../inputvalue";
 import { Button } from "../button";
 import { Modal } from "../modal";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import ResultContext from "../../contexts/ResultContext";
 
 export const Box = () => {
   const labelWeight = "Insira o seu peso";
@@ -13,7 +14,7 @@ export const Box = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
-  const [result, setResult] = useState("");
+  const { result, setResult } = useContext(ResultContext)
 
   function toggleModal(e) {
     setIsOpen(!isOpen);
