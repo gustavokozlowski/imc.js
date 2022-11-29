@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.main`
-  padding: 0;
-  margin: 0;
   background: #fff;
   height: 100vh;
   width: 100vw;

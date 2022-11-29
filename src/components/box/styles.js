@@ -34,10 +34,9 @@ export const ContainerForm = styled.form`
  margin-bottom: 20px;
 `
 export const ErrorMessage = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom:5px;
-  margin-top: -4px;
   color: #f33;
   font-family: 'Roboto',; 
 `
