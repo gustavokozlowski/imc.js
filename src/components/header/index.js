@@ -9,7 +9,7 @@ import {
 export const Header = () => {
   return (
     <ContainerHeader>
-      <AppTitle>IMC.</AppTitle>
+      <AppTitle>EASY-IMC.</AppTitle>
       <NavbarContainer>
         <NavbarLink to="/">home</NavbarLink>
         <NavbarLink to="/about">sobre</NavbarLink>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StatusBar = styled.div`
   background-color:  ${(props) => props.backgroundColor || "#ddd"};
   height: 5vh;
-  width: 8vw;
+  width: 10vw;
   border: 2px solid #000;
   text-align: center;
   display:flex;

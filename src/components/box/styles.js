@@ -5,23 +5,23 @@ export const ContainerBox = styled.main`
   background-color: #fff;
   padding: 0;
   margin: 0;
-  height: 40vh;
+  height: 45vh;
   width: 30vw;
   display: flex;
   flex-direction: column;
   border: 2px solid #000;
+  justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0.7;
   border-radius: 15px;
-  /* box-shadow: 10px 10px 10px 10px #000; */
   box-shadow: 5px 4px 8px 6px rgba(0, 0, 0, 0.9), 5px 6px 30px 5px rgba(0, 0, 0, 0.9);
 
 `;
 
 export const Title = styled.h1`
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 1.3vw;
   color: #000000;
 `
 export const ContainerForm = styled.form`
@@ -46,6 +46,6 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   display: flex;
-  height: 25%;
+  height: 15%;
   width: 90%;
 `

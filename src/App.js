@@ -1,15 +1,15 @@
 import { MainContainer } from "./components/maincontainer";
 import { MainRouter } from "./router";
-import ResultContext from "./contexts/ResultContext";
+import ImcContext from "./contexts/ImcContext";
 import { useState } from "react";
 
 export default function App (){
-  const [result, setResult] = useState("");
+  const [imc, setImc] = useState("");
   return (
     <MainContainer>
-      <ResultContext.Provider value={{result, setResult}}  >
+      <ImcContext.Provider value={{imc, setImc}}  >
         <MainRouter />
-      </ResultContext.Provider>
+      </ImcContext.Provider>
     </MainContainer>
   );
 };
