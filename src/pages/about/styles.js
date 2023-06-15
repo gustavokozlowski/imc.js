@@ -7,6 +7,7 @@ export const ContainerAbout = styled.main`
   display: flex;
   flex-direction: column;
   color: #000;
+  
 `;
 
 export const Main = styled.main`
@@ -15,21 +16,22 @@ export const Main = styled.main`
   flex-direction: column;
   margin: 5vw;
   border-radius: 6px;
+  
 `;
 export const Section = styled.section`
   margin-left: 2vw;
-  paddi
 `;
 export const ALink = styled.a`
   text-decoration: none;
   &:hover {
   color: #6a2a7f;
-},
+}
     &:active {
   color: #000;
 }
 `;
 export const Title = styled.h1`
+  padding: 1rem;
   font-size: clamp(2.5em, 1em + 1vw, 1.7em);
   margin: 1vw;
 `;
@@ -40,7 +42,7 @@ export const Img = styled.img`
 `;
 
 export const Text = styled.p`
-  
+  padding: 1rem ;
   font-size: ${(props) => props.fontSize || "clamp(1.5em, 1em + 1vw, 1.7em );"};
   font-weight: ${(props) => props.fontWeight || "bolder"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};

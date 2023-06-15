@@ -59,4 +59,4 @@ export const StyledModal = Modal.styled`
   padding: 10px;
   border-radius: 8px;
   opacity: 0.95;
-  transition-duration: all 10s ease-in-out`;
+  transition-duration: all 1s ease-in-out`;

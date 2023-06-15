@@ -4950,6 +4950,11 @@ ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
+imask@^6.5.0-alpha.0:
+  version "6.5.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/imask/-/imask-6.5.0-alpha.0.tgz#9ed02abf272c0e516df37879b90f6332885bf4c5"
+  integrity sha512-yv/MGZB65SC+EkYE8DPE9YWj8SfOOtoLd4G70tH5G20sj1Ek9MdeUl+KvDhuxY+y8C2vkouTCrhSYwylFsalcw==
+
 immer@^9.0.7:
   version "9.0.15"
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.15.tgz#0b9169e5b1d22137aba7d43f8a81a495dd1b62dc"
@@ -7432,6 +7437,14 @@ react-hook-form@^7.38.0:
   version "7.38.0"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.38.0.tgz#53d6a68df587ce4ce88352f63e0ecc7fc8779320"
   integrity sha512-gxWW1kMeru9xR1GoR+Iw4hA+JBOM3SHfr4DWCUKY0xc7Vv1MLsF109oHtBeWl9shcyPFx67KHru44DheN0XY5A==
+
+react-imask@^6.5.0-alpha.0:
+  version "6.5.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/react-imask/-/react-imask-6.5.0-alpha.0.tgz#f924d3422c14b826e948e0f5bc24051509044683"
+  integrity sha512-LnMf7oH/0ISJ98ZzGFGrkFoLjVvPIg0Xy+W7qNgxHjNLEPPkQWYjSkQ3WBmuEty8aLunczXWHu2JEAapmkeJnQ==
+  dependencies:
+    imask "^6.5.0-alpha.0"
+    prop-types "^15.8.1"
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

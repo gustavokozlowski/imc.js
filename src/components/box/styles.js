@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerBox = styled.main`
+  z-index: 1000;
   font-family: Helvetica;
   background-color: #fff;
   padding: 0;
@@ -21,8 +22,9 @@ export const ContainerBox = styled.main`
 
 export const Title = styled.h1`
   margin-top: 20px;
-  font-size: 1.3vw;
-  color: #000000;
+  font-size: 1.7rem;
+  color: #000;
+  text-shadow: 2px 2px #ddd;
 `
 export const ContainerForm = styled.form`
  width: 100%;
@@ -45,6 +47,62 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   display: flex;
-  height: 15%;
-  width: 90%;
+  height: 5vh;
+  width: 90vw;
 `
+export const Input = styled.input`
+  font-size: 1vw;
+  padding-left: 6px;
+  margin-top: 4px;
+  color: #000;
+  border: 1px solid #000000;
+  height: 5.5vh;
+  width: 20vw;
+  background-color: #fff;
+  border-radius: 7px;
+  ::-webkit-input-placeholder {
+    color: black;
+  }
+`;
+export const Label = styled.label`
+  margin-bottom: -1.5px;
+  font-size: 20px;
+  color: #000;
+  align-self: flex-start;
+  text-shadow: 2px 2px #ddd;
+  font-weight: bold;
+`;
+export const ContainerInput = styled.main`
+  height: 10vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+`;
+
+export const Button = styled.button`
+  margin: 2vh;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 7vw;
+  font-weight: 700;
+  height: 4vh;
+  background: #800080;
+  border: 1px solid black;
+  color: #000;
+  margin-top: 5vh;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px black;
+  align-self: center;
+  &:active {
+    background: #b686c7;
+    box-shadow: none;
+  };
+  &:hover {
+    background: #800080;
+  }
+`;

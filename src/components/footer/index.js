@@ -1,6 +1,6 @@
 import { Text } from "../../pages/about/styles";
 import {
-    ContainerFooter,
+    ContainerFooter
   } from "./styles";
   
   export const Footer = () => {
