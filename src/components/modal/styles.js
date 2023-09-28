@@ -1,27 +1,24 @@
 import Modal from "styled-react-modal";
 import styled from "styled-components";
 
+
 export const ButtonModal = styled.button`
   text-align: center;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  border-radius: 6px;
-  background: #b686c7;
+  border-radius: 4px;
+  background: #6a2a9f;
   display: flex;
-  border: 2px solid #000;
-  color: #ffff;
+  outline: none;
+  border: none;
+  margin: 1rem;
+  color: #fff;
   width: 6vw;
-  height: 4vh;
+  height: 5vh;
   align-items: center;
   justify-content: center;
+  box-shadow: 0.1px 0.5px 0.5px 0.1px black;
   cursor: pointer;
-  &:hover {
-    background: #800080;
-    box-shadow: 1px 1px 1px 1px #000;
-  }
-  ,
   &:active {
-    background: #b686c7;
+    box-shadow: none;
   }
 `;
 
@@ -31,32 +28,35 @@ export const TitleDiv = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
+  gap: 2rem;
 `;
+
 export const ButtonLabel = styled.label`
   font-size: 1.1rem;
   display: flex;
   color: #fff;
-  cursor: pointer;
+cursor: pointer;
   font-weight: bold;
   overflow-wrap: break-word;
   word-wrap: break-word;
   justify-content: center;
   align-items: center;
+  text-shadow: #000 0.2px 0.2px 0.1px;
 `;
 export const ButtonDiv = styled.div`
   margin: auto;
 `;
 
 export const StyledModal = Modal.styled`
-  margin: 0;
   flex-direction: column;
   width: 35vw;
-  height: 50vh;
+  height: fit-content;
   display: flex;
-  border: 0.8px solid #000;
-  background-color: #ddd3ff;
+ 
+  background-color: #fff;
   color: #000;
-  padding: 10px;
-  border-radius: 8px;
-  opacity: 0.95;
-  transition-duration: all 1s ease-in-out`;
+  border-radius: 15px;
+
+ transition: 2000ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  `;

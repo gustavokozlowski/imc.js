@@ -2,4 +2,6 @@ body {
   margin: 0;
   font-family:'Segoe UI', 'Roboto', 'Oxygen';
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-image: linear-gradient(to right, #8555A7, #454185 );
 }

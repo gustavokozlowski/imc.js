@@ -1,12 +1,15 @@
 import { Container }from './styles'
 import React from 'react'
-import { Header } from '../header'
+import { About } from '../../pages/about'
+import { Home } from '../../pages/home'
+import { Footer } from '../footer'
 
-export const MainContainer = ({ children }) => {
+export const MainContainer = () => {
   return (
  <Container>
-  <Header/>
-    {children}
+    <Home />
+    <About  />
+    <Footer />
  </Container>
   )
 }

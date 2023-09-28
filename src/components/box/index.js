@@ -1,6 +1,5 @@
 import {
   ContainerBox,
-  Title,
   ContainerForm,
   ButtonContainer,
   ErrorMessage,
@@ -8,27 +7,28 @@ import {
   Label,
   ContainerInput,
   Button,
+  ErrorContainer,
+  CalculatorIcon,
+  ErrorIcon,
 } from "./styles";
 import { Modal } from "../modal";
 import React, { useState, useContext } from "react";
 import ImcContext from "../../contexts/ImcContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { ButtonLabel } from "../modal/styles";
 
 import * as yup from "yup";
 
 const schemaImc = yup.object().shape({
   height: yup
-    .number("A altura tem que ser um número válido")
-    .min(2, "Deve conter no minimo 2 digitos")
-    .moreThan(0.2, `Este campo não pode ser menor que: 0`)
-    .positive("A altura deve ser um número positivo")
-    .required("Campo obrigatório"),
+    .number()
+    .positive("Deve ser um número positivo")
+    .typeError("Por favor, insira um número válido")
+    .required("campo obrigatório!"),
   weight: yup
     .number()
-    .required("O campo Senha é obrigatório")
-    .min(1, "A senha deve ter no min 4 caracteres"),
+    .typeError("Por favor, insira um número válido")
+    .required("campo obrigatório!"),
 });
 
 export const Box = () => {
@@ -37,66 +37,88 @@ export const Box = () => {
 
   const {
     register,
-    handleSubmit: onSubmit, watch,
+    handleSubmit,
+    watch,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schemaImc),
+    mode: "onTouched",
   });
   function toggleModal() {
     setIsOpen(!isOpen);
   }
-  const handle = (data) => {
-    // if (weight > 0 && height > 0) {
-    //   const result = weight / (height * height);
-    //   setImc(result.toFixed(2));
-    //   setIsOpen(!isOpen);
-    //   return <Modal isOpen={isOpen} toggleModal={toggleModal} />;
-    // }else if( weight <=0 && height <= 0 ){
-    //   setWeight("");
-    //   setHeight("");
-    // }
-    return console.log(data);
+  const handleResult = (data) => {
+    if (data.height !== null && data.weight !== null) {
+      const height = watch("height") / 100;
+      const weight = watch("weight");
+      const result = weight / (height * height);
+      setImc(result.toFixed(2));
+      console.log(data);
+
+      return setIsOpen(true);
+    }
+    console.log("ACESSO:", isOpen === true ? "Negado" : "okay baby");
   };
-
-  const handleClear = (weight, height) => {
-
-    console.log(height)
-    setImc("");
-  };
-
+  console.log(errors);
   return (
     <>
-      <ContainerBox className="container-box">
-        <ContainerForm onSubmit={onSubmit(handle)} className="form">
-          <Title className="form-title">calcule o seu imc</Title>
+      <ContainerBox
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        exit={{ opacity: 0 }}
+        className="container-box"
+      >
+        <CalculatorIcon />
+        {/* <Title className="form-title">calcule seu imc</Title> */}
+        <ContainerForm onSubmit={handleSubmit(handleResult)}>
           <ContainerInput>
             <Label htmlFor="height">Insira a sua altura</Label>
             <Input
+              id="height"
               type="number"
-              placeholder="1.80"
-              name="height"
-              {...register("height")}
+              placeholder="180"
+              {...register("height", { require: true })}
             />
           </ContainerInput>
-          <ErrorMessage>{errors.height?.message}</ErrorMessage>
+          {errors.height ? (
+            <ErrorContainer
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0 }}
+            >
+              <ErrorIcon />
+              <ErrorMessage>{errors?.height?.message}</ErrorMessage>
+            </ErrorContainer>
+          ) : null}
           <ContainerInput>
             <Label htmlFor="weight">Insira o seu peso</Label>
             <Input
+              id="weight"
               type="number"
               placeholder="80"
-              name="weight"
               {...register("weight")}
             />
           </ContainerInput>
-          <ErrorMessage>{errors.weight?.message}</ErrorMessage>
+          {errors.weight ? (
+            <ErrorContainer
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0 }}
+            >
+              <ErrorIcon />
+              <ErrorMessage>{errors?.weight?.message}</ErrorMessage>
+            </ErrorContainer>
+          ) : null}
           <ButtonContainer>
-            <Button type="submit">
-              <ButtonLabel>calcular</ButtonLabel>
+            <Button type="submit">calcular</Button>
+
+            <Button id="limpar" onClick={() => reset()}>
+              limpar
             </Button>
-            <Button onClick={handleClear}>
-              <ButtonLabel>limpar</ButtonLabel>
-            </Button>
-            {/* <Button onClick={handleClear} name="Limpar" /> */}
           </ButtonContainer>
         </ContainerForm>
       </ContainerBox>

@@ -1,32 +1,34 @@
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
-  background-color:#8c5cac;
+  z-index: 1000;
+  background-color: #6a2a9f;
   height: 8vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  border-bottom: 2px solid #000;
   align-items: center;
   justify-content: space-around;
+  box-sizing: border-box;
+  position: fixed;
 `;
 
 export const AppTitle = styled.h1`
-  color:  #fff ;
+  color: #fff;
   font-size: 1.5rem;
-  text-shadow: #000 0.1em 0.1em 0.2em;
+  text-shadow: #6a2a9f 2px 2px 2px; 
   font-weight: bolder;
-  
 `;
 export const NavbarContainer = styled.nav`
   display: flex;
 `;
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled(HashLink)`
   text-decoration: none;
-  text-shadow: #000 0.1em 0.1em 0.2em;
   color: #fff;
-  font-size:1.3rem;
-  margin: 10px;
+  font-size: 1.3rem;
+  transition: all 0.300s;
+  margin: 1rem;
   &:hover,
   &:focus {
     color: #fff7;
@@ -34,5 +36,4 @@ export const NavbarLink = styled(Link)`
   &:active {
     color: #fff7;
   }
-  
 `;

@@ -11,8 +11,8 @@ export const Header = () => {
     <ContainerHeader>
       <AppTitle>EASY-IMC.</AppTitle>
       <NavbarContainer>
-        <NavbarLink to="/">home</NavbarLink>
-        <NavbarLink to="/about">sobre</NavbarLink>
+        <NavbarLink smooth to="/#imc">calcular</NavbarLink>
+        <NavbarLink smooth to="/#about">sobre</NavbarLink>
       </NavbarContainer>
     </ContainerHeader>
   );

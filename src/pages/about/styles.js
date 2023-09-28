@@ -1,50 +1,66 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.main`
-  background: #fff;
-  height: 100vh;
-  width: 100vw;
+  background-image: linear-gradient(to right, #8555a7, #454185);
   display: flex;
   flex-direction: column;
-  color: #000;
-  
+  color: #fff;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
 `;
 
 export const Main = styled.main`
+  gap: 4rem;
   display: flex;
-  background-color: #ddd3ff;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin: 5vw;
   border-radius: 6px;
-  
+  height: 100vh;
 `;
 export const Section = styled.section`
-  margin-left: 2vw;
+  padding: 1rem;
+  outline: none;
+  height: fit-content;
+  width: 50vw;
+  background-color: #6a2a9f;
+
+  border-radius: 6px;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &:hover {
+    cursor: pointer;
+    width: 50vw;
+  }
 `;
 export const ALink = styled.a`
   text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
   &:hover {
-  color: #6a2a7f;
-}
-    &:active {
-  color: #000;
-}
+    color: #ddd;
+  }
+  &:active {
+    color: #000;
+  }
 `;
 export const Title = styled.h1`
-  padding: 1rem;
-  font-size: clamp(2.5em, 1em + 1vw, 1.7em);
-  margin: 1vw;
+  font-size: 2rem;
+`;
+export const SubTitle = styled.h1`
+  font-size: 1rem;
+  color: #fff;
 `;
 export const Img = styled.img`
-    width: 35vw;
-    height: 25vh;
-    border-radius: 6px;
+  width: 35vw;
+  height: 25vh;
+  border-radius: 6px;
 `;
 
 export const Text = styled.p`
-  padding: 1rem ;
-  font-size: ${(props) => props.fontSize || "clamp(1.5em, 1em + 1vw, 1.7em );"};
   font-weight: ${(props) => props.fontWeight || "bolder"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
-  margin: ${(props) => props.marginProps || "1vw"};
+  color: #fff;
 `;
