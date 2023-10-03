@@ -8,6 +8,8 @@ export const ContainerFooter = styled.footer`
   justify-content: center;
   text-align: center;
   align-items: center;
+  z-index: 1000;
+  margin-top: 15rem;
 `;
 export const ContentFooter = styled.div`
   width: 80vw;

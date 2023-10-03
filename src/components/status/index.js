@@ -7,7 +7,7 @@ export const Status = () => {
   const [background, setBackground] = useState("");
   const [status, setStatus] = useState("");
   useEffect(() => {
-   const generateStatus = () =>{
+   const generateStatus = (imc) =>{
       if (imc < 18.5) {
         setBackground("#FDDA0D");
         setStatus("Abaixo do Peso");
@@ -26,7 +26,7 @@ export const Status = () => {
         setStatus("Indefinido");
       }
     }
-    generateStatus();
+    generateStatus(imc);
   }, [imc]);
   return (
     <ContainerStatus>
@@ -37,7 +37,7 @@ export const Status = () => {
       <Text>{imc}</Text>
       <Text>STATUS</Text>
       <StatusBar backgroundColor={background}>
-        <TextStatus fontSize="">{status}</TextStatus>
+        <TextStatus>{status}</TextStatus>
       </StatusBar>
     </ContainerStatus>
   );

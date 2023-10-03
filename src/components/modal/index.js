@@ -4,8 +4,8 @@ import {
   ButtonDiv,
   ButtonLabel,
   ButtonModal,
+  ContainerModal,
   StyledModal,
-  TitleDiv,
 } from "./styles";
 import FocusLock from "react-focus-lock";
 import { Status } from "../status";
@@ -13,7 +13,7 @@ import { Status } from "../status";
 //criar forma para o modal fazer uma transição mais suave
 
 export const Modal = ({ isOpen, toggleModal }) => {
-  const name = "Okay";
+  const name = "okay";
   return (
     <>
         <motion.div
@@ -31,14 +31,14 @@ export const Modal = ({ isOpen, toggleModal }) => {
         aria-labelledby="modal-label"
       >
           <FocusLock>
-            <TitleDiv>
+            <ContainerModal>
               <Status />
               <ButtonDiv>
                 <ButtonModal onClick={toggleModal}>
-                  <ButtonLabel>{name}</ButtonLabel>
+                {name}
                 </ButtonModal>
               </ButtonDiv>
-            </TitleDiv>
+            </ContainerModal>
           </FocusLock>
       </StyledModal>
         </motion.div>
